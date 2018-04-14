@@ -1,8 +1,8 @@
-sed -i -e "s|http://localhost:8080|https://vue-auth-pwa.cfapps.io|g" src/auth.js
+sed -i -e "s|http://localhost:8080|https://vue-ui-auth-example.cfapps.io|g" src/auth.js
 npm run build
 cd dist
 touch Staticfile
 echo 'pushstate: enabled' > Staticfile
-cf push vue-auth-pwa --no-start
-cf set-env vue-auth-pwa FORCE_HTTPS true
-cf start vue-auth-pwa
+cf push vue-ui-auth-example --no-start
+cf set-env vue-ui-auth-example FORCE_HTTPS true
+cf start vue-ui-auth-example
