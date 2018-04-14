@@ -25,6 +25,10 @@ export default {
     return localStorage.token
   },
 
+  getName () {
+    return localStorage.token.getName
+  },
+
   logout (cb) {
     delete localStorage.token
     if (cb) cb()
